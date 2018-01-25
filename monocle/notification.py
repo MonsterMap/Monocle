@@ -1056,10 +1056,10 @@ class Notifier:
                 }
             }
             self.log.info("Notifying gym Name = {}, team = {}", fort["name"], fort["team"])
-        result = await self.wh_send(SessionManager.get(), data)
-        self.last_notification = monotonic()
-        self.sent += 1
-        return result
+            result = await self.wh_send(SessionManager.get(), data)
+            self.last_notification = monotonic()
+            self.sent += 1
+            return result
 
     async def webhook_raid(self, raid, fort):
         if not WEBHOOK:
